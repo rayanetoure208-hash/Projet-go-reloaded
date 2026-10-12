@@ -1,28 +1,28 @@
-package main  
+package main
 
 import (
+	"fmt"
 	"os"
-	"strconv"
-	"strings"
+
+	"go-reloaded/lecture"
+	"go-reloaded/transform"
+	"go-reloaded/writefile"
 )
 
 func main() {
-	// pour verifier si on a bien deux fichiers 
-	if len(os.arg) !=3 {
-		return
+	if len(os.Args) != 3 {
+		fmt.Fprintln(os.Stderr, "usage : go run . <fichier_entree> <fichier_sortie>")
+		os.Exit(1)
 	}
-	//pour lire le fichier sample 
-	data, err := os.Readfile(os.args[1])
+
+	texte, err := lecture.Lire(os.Args[1])
 	if err != nil {
-      return 
+		fmt.Fprintln(os.Stderr, "erreur :", err)
+		os.Exit(1)
 	}
-	text := string(data)
 
-	// pour separer le texte en mots 
-	words := strings.fields(text)
-
-	// Parcourir les mots 
-	for i := 0; i < len(words); i++ {
-		
+	if err := writefile.Ecrire(os.Args[2], transform.Appliquer(texte)); err != nil {
+		fmt.Fprintln(os.Stderr, "erreur :", err)
+		os.Exit(1)
 	}
 }
