@@ -1,3 +1,4 @@
+// Package lecture lit le fichier d'entrée.
 package lecture
 
 import (

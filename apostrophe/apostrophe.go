@@ -1,3 +1,4 @@
+// Package apostrophe place les guillemets simples contre les mots qu'ils entourent.
 package apostrophe
 
 import "unicode"
