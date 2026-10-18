@@ -1,4 +1,3 @@
-// Package ponctuation corrige les espaces autour de . , ! ? : ;
 package ponctuation
 
 import (

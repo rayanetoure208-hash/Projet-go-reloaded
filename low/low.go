@@ -1,4 +1,3 @@
-// Package low met un mot en minuscules.
 package low
 
 import "strings"

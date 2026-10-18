@@ -1,4 +1,3 @@
-// Package bin convertit un nombre binaire en décimal.
 package bin
 
 import "strconv"

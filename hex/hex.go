@@ -1,4 +1,3 @@
-// Package hex convertit un nombre hexadécimal en décimal.
 package hex
 
 import "strconv"

@@ -1,4 +1,3 @@
-// Package writefile écrit le fichier de sortie.
 package writefile
 
 import (

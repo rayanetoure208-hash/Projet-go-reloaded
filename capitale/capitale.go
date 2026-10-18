@@ -1,4 +1,3 @@
-// Package capitale met la première lettre d'un mot en majuscule.
 package capitale
 
 import (
